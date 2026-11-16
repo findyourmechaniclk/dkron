@@ -23,6 +23,7 @@ jobs:
   validate:
     name: Validate the OpenAPI spec
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout
@@ -52,6 +53,7 @@ jobs:
   generate:
     name: Generate the OpenAPI client
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
       pull-requests: write
